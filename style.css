@@ -1,0 +1,188 @@
+html {
+    background-color: rgb(21, 21, 21);
+}
+body {
+    margin: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "aside header header"
+    "aside about about"
+    "work  work  work"
+    "resume resume contact"
+    "footer footer footer";
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+.container {
+    margin: 5px;
+    padding: 10px;
+}
+h1{
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F3C623;
+}
+h2 {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #a2a2a2;
+}
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F4F6FF;
+}
+i {
+    color: #EB8317;
+}
+button {
+    background-color: #EB8317;
+    border-radius: 5px;
+    a {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        color: #F4F6FF;
+
+    }
+}
+header, aside, card {
+    padding: 0px 15px 15px 15px;
+    display: flex;
+    background-color: black;
+    border-radius: 50px;
+    box-shadow: 1px 1px 15px #10375C; 
+}
+header {
+    grid-area: header;
+    height: fit-content;
+    display: flex;  
+    justify-content: space-around;
+    h1 {
+        font-size: 45px;
+        display: flex;
+        float: left;
+    }
+    .navbar {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 7%;
+        float: right;
+        align-items: flex-end;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        :hover {
+            cursor: pointer;
+            color: #ffc07c;
+        }
+        i {
+            text-align: center;
+            font-size: 2rem;
+        }
+        p {
+            margin-top: 5px;
+        }
+    }
+}
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(35%));
+    height: auto;
+    float: left;
+    #pfp {
+        display: flex;
+        width: 75%;  
+        height: auto;
+        clip-path: circle(35%);
+        overflow: hidden;
+        margin: 0 auto;
+        img {
+            width: 100%;  
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    div {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        i {
+            text-align: left;
+            font-size: 1rem;
+        }
+        h2 {
+            margin: 0;
+        }
+    }
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        list-style: none;
+        flex-direction: row;
+        gap: 50px;
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            :hover {
+                cursor: pointer;
+                color: #ffc07c;
+            }
+            i {
+                text-align: center;
+                font-size: 2rem;
+            }
+            p {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+#about {
+    grid-area: about;
+    h1 {
+        font-size: 64px;
+    }
+    button {
+        display: flex;
+        position: right;
+    }
+}
+#work {
+    grid-area: work;
+    h1 {
+        font-size: 64px;
+    }
+}
+#resume {
+    grid-area: resume;
+    h1 {
+        font-size: 64px;
+    }
+}
+#contact {
+    grid-area: contact;
+    h1 {
+        font-size: 64px;
+    }
+}
+footer {
+    grid-area: footer;
+    h1 {
+        font-size: 64px;
+    }
+}
