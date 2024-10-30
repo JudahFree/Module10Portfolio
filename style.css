@@ -204,6 +204,9 @@ footer {
     .hidden {
         display: flex;
         font-size: 3rem;
+        :hover {
+            cursor: pointer;
+        }
         #aside-btn {
             float: left;
             align-self: flex-start;
