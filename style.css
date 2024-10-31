@@ -204,6 +204,9 @@ footer {
     .hidden {
         display: flex;
         font-size: 3rem;
+        input {
+            opacity: 0%;
+        }
         :hover {
             cursor: pointer;
         }
@@ -215,6 +218,12 @@ footer {
             float: right;
             align-self: flex-end;
         }
+    }
+    input ~ .navbar {
+        right: -100000px;
+    }
+    input:checked ~ .navbar{
+        right: 0px;
     }
     header {
         height: 5rem;
