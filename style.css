@@ -29,12 +29,14 @@ h1{
     color: #F3C623;
 }
 h2 {
+    font-size: 2em;
     font-family: "Arsenal SC", sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #a2a2a2;
 }
 p {
+    font-size: 24px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -52,7 +54,7 @@ button {
         font-style: normal;
         text-decoration: none;
         color: #F4F6FF;
-
+        font-size: 24px;
     }
 }
 header, aside, card {
@@ -201,12 +203,14 @@ footer {
         align-items: center;
         justify-content: space-evenly;
     }
+    input[type="checkbox"] {
+        display: none;
+    } 
     .hidden {
         display: flex;
         font-size: 3rem;
-        input {
-            opacity: 0%;
-        }
+        background-color: transparent;
+        border-style: none;
         :hover {
             cursor: pointer;
         }
@@ -218,12 +222,12 @@ footer {
             float: right;
             align-self: flex-end;
         }
-    }
-    input ~ .navbar {
-        right: -100000px;
-    }
-    input:checked ~ .navbar{
-        right: 0px;
+        #nav-btn[type="checkbox"]:checked + .navbar {
+            right: 0px;
+        }
+        #aside-btn[type="checkbox"]:checked ~ aside {
+            display: flex;
+        }
     }
     header {
         height: 5rem;
